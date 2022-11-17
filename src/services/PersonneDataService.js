@@ -13,16 +13,15 @@ class PersonneDataService {
     return http.post("/entree", data);
   }
 
-  // A COMPLETER
-
-  update(data) {
+  // AJOUTER
+  modify(data) {
     return http.put("/entree", data);
-  
-  delete(id) {
-    return http.delete("/entree", data);
   }
 
-  
+  delete(id) {
+    return http.delete(`/entree/${id}`);
+  }
+
 }
 
 export default new PersonneDataService();
